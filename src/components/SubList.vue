@@ -11,9 +11,6 @@
                     <SubDetail :stdId="std.id" @edit="showEdit" @delete="reload()"/>
                 </div>
             </li>
-            <!-- <div v-if="std.isShow">
-                <SubDetail :stdId="std.id" />
-            </div> -->
             <div v-if="isEdit">
                 {{ EditId }}
             </div>

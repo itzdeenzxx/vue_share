@@ -1,13 +1,13 @@
 <template>
   <div>
-    <h1 class="display-5 text-primary">Portfolio</h1>
+    <h1 class="display-5">PORTFOLIO</h1>
     
-    <h1 class="display-6 text-primary">{{ name }}</h1>
+    <h1 class="display-6">{{ name }}</h1>
     <img src="./assets/addeen.png" alt="">
-    <p class="text-danger text-opacity-50">{{ des }}</p>
+    <p class="text-danger">{{ des }}</p>
     <p class="text-danger">{{ hobbies }}</p>
     
-    <p>ผลการเรียน</p>
+    <p class="display-6">ผลการเรียน</p>
     <button class="btn btn-outline-primary btn-sm mx-1" @click="toggleAdd()">เพิ่มผลการเรียน</button>
     <button class="btn btn-outline-secondary btn-sm mx-1" @click="toggleList()">แสดงผลการเรียน</button>
     
