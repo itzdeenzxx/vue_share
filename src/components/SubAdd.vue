@@ -5,29 +5,29 @@
                 <div class="row">
                     <div class="col-lg-4 col-md-4 col-sm-6 mt-2">
                         <label for="stdId" class="form-label">รหัสวิชา</label>
-                        <input type="text" id="stdId" class="form-control" v-model.trim="stds.id" />
+                        <input type="text" id="stdId" class="form-control" v-model.trim="sub.id" />
                     </div>
                     <div class="col-lg-8 col-md-8 col-sm-6 mt-2">
                         <label for="stdName" class="form-label">ชื่อวิชา</label>
-                        <input type="text" id="stdName" class="form-control" v-model.trim="stds.name" />
+                        <input type="text" id="stdName" class="form-control" v-model.trim="sub.name" />
                     </div>
                     <div class="col-lg-2 col-md-3 col-sm-4 mt-2">
-                        <label for="stdYr" class="form-label">เกรด</label>
-                        <select id="stdYr" class="form-select" v-model="stds.yr">
+                        <label for="subgrade" class="form-label">เกรด</label>
+                        <select id="subgrade" class="form-select" v-model="sub.grade">
                             <option value="1">A</option>
                             <option value="2">B+</option>
                             <option value="3">B</option>
                             <option value="4">C+</option>
-                            <option value="4">C</option>
-                            <option value="4">D+</option>
-                            <option value="4">D</option>
-                            <option value="4">F</option>
-                            <option value="4">W</option>
+                            <option value="5">C</option>
+                            <option value="6">D+</option>
+                            <option value="7">D</option>
+                            <option value="8">F</option>
+                            <option value="9">W</option>
                         </select>
                     </div>
                     <div class="col-lg-2 col-md-3 col-sm-4 mt-2">
-                        <label for="stdYr" class="form-label">หน่วยกิต</label>
-                        <select id="stdYr" class="form-select" v-model="stds.yr">
+                        <label for="subCre" class="form-label">หน่วยกิต</label>
+                        <select id="subCre" class="form-select" v-model="sub.credit">
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -39,14 +39,7 @@
                     </div>
                 </div>
             </form>
-
         </div>
-    </div>
-    <div class="alert alert-success mt-2" v-show="addSuccess">
-    บันทึกข้อมูล {{ stds.id }} - {{ stds.name }} สำเร็จ
-    </div>
-    <div class="alert alert-danger mt-2" v-shoe="addError">
-    {{ errMessage }}
     </div>
 </template>
 
@@ -55,28 +48,23 @@ export default {
     name: 'SubAdd',
     data() {
         return {
-            stds: {
-                id: "",
-                name: "",
-                major: "CS",
-                yr: 2,
-                inshow: false
-            }
+            sub: []
+            
         }
     },
     methods: {
         handleSubmit() {
-            let students = {
-                id: this.stds.id,
-                name: this.stds.name,
-                major: this.stds.major,
-                yr: this.stds.yr,
+            let subject = {
+                id: this.sub.id,
+                name: this.sub.name,
+                grade: this.sub.grade,
+                credit: this.sub.credit,
                 isShow: false
             }
-            fetch('http://localhost:3000/students', {
+            fetch('http://localhost:3000/subject', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(students)
+                body: JSON.stringify(subject)
             })
                 .then(() => {
                     this.addSuccess = true
