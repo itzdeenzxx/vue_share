@@ -1,0 +1,69 @@
+{
+  "data_port": [
+    {
+      "name": "Addeen Salaehsakul",
+      "grade": "Computer Science",
+      "des": "Description",
+      "hobbies": "KIN KUY",
+      "id": "0e5c"
+    }
+  ],
+  "subject": [
+    {
+      "id": "01418141",
+      "name": "Intellectual Properties and Professional Ethics",
+      "grade": "A",
+      "credit": 3,
+      "isShow": false
+    },
+    {
+      "id": "01418111",
+      "name": "Introduction to Computer Science",
+      "grade": "A",
+      "credit": 2,
+      "isShow": false
+    },
+    {
+      "id": "01417111",
+      "name": "Calculus I",
+      "grade": "A",
+      "credit": 3,
+      "isShow": false
+    },
+    {
+      "id": "02999144",
+      "name": "Life Skill for Undergraduate Student",
+      "grade": "A",
+      "credit": 1,
+      "isShow": false
+    },
+    {
+      "id": "01355101",
+      "name": "English for Everyday Life",
+      "grade": "A",
+      "credit": 3,
+      "isShow": false
+    },
+    {
+      "id": "01999021",
+      "name": "Thai Language for Communication",
+      "grade": "A",
+      "credit": 3,
+      "isShow": false
+    },
+    {
+      "id": "01418112",
+      "name": "Fundamental Programming Concepts",
+      "grade": "A",
+      "credit": 3,
+      "isShow": false
+    },
+    {
+      "id": "01999111",
+      "name": "Knowledge of the Land",
+      "grade": "A",
+      "credit": 2,
+      "isShow": false
+    }
+  ]
+}
