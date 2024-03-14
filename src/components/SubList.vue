@@ -2,15 +2,18 @@
     <div>
         <h2>ผลการเรียน</h2>
         <ul class="list-group">
-            <li v-for="(std, id) in subject" :key="id" class="list-group-item">
+            <li v-for="(std, id) in subject" :key="id" class="list-group-item" id="list">
                 
-                <a href="#" @click="setShow(std)">
+                <a href="#list" @click="setShow(std)">
                     {{ std.name }}
                 </a>
                 <div v-if="std.isShow">
                     <SubDetail :stdId="std.id" @edit="showEdit" @delete="reload()"/>
                 </div>
             </li>
+            <!-- <div v-if="std.isShow">
+                <SubDetail :stdId="std.id" />
+            </div> -->
             <div v-if="isEdit">
                 {{ EditId }}
             </div>
@@ -58,5 +61,15 @@ export default {
 </script>
 
 <style>
-/* Add your styles here */
+a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+a:hover{
+    color: darkgray;
+    font-size: 20.5px;
+
+
+}
 </style>
