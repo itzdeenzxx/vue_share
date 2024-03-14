@@ -78,8 +78,8 @@ export default {
         body: JSON.stringify(subject),
       })
         .then(() => {
-            
           this.addSuccess = true;
+          alert("เพิ่มรายวิชาสำเร็จ")
         })
         .catch((err) => {
           this.addError = true;

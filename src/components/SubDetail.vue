@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="card my-2">
-      <div class="card-body bg-info bg-opacity-10">
+      <div class="card-body bg-dark bg-opacity-10">
         <h5 class="card-title">รหัสวิชา {{ subject.id }}</h5>
         <div class="card-sub-title">ชื่อวิชา {{ subject.name }}</div>
         <div class="cart-text">

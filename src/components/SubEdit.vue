@@ -3,7 +3,11 @@
       <h2>แก้ไขข้อมูลนิสิต</h2>
       <form @submit.prevent="handleSubmit">
           <div class="mb-3">
-              <label for="editName" class="form-label">ชื่อนิสิต</label>
+              <label for="editName" class="form-label">รหัสวิชา</label>
+              <input type="text" class="form-control" id="editName" v-model="editedStudent.id">
+          </div>
+          <div class="mb-3">
+              <label for="editName" class="form-label">ชื่อวิชา</label>
               <input type="text" class="form-control" id="editName" v-model="editedStudent.name">
           </div>
           <div class="mb-3">
@@ -52,7 +56,7 @@ export default {
           })
           .then(() => {
               alert('บันทึกการแก้ไขข้อมูลเรียบร้อยแล้ว');
-              // อาจจะมีการ reload หน้าหลังจากการบันทึก
+              location.reload()
           })
           .catch(error => {
               console.error('Error updating student data:', error);
